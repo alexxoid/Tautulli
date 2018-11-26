@@ -3473,7 +3473,7 @@ class TELEGRAM(Notifier):
                           'name': 'telegram_disable_web_preview',
                           'description': 'Disables automatic link previews for links in the message',
                           'input_type': 'checkbox'
-                          }
+                          },
                          {'label': 'Proxy [IP:PORT]',
                           'value': self.config['proxy'],
                           'name': 'telegram_proxy',
