@@ -3379,7 +3379,8 @@ class TELEGRAM(Notifier):
                        'disable_web_preview': 0,
                        'html_support': 1,
                        'incl_subject': 1,
-                       'incl_poster': 0
+                       'incl_poster': 0,
+                       'proxy': ''
                        }
 
     def agent_notify(self, subject='', body='', action='', **kwargs):
