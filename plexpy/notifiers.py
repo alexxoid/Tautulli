@@ -3474,6 +3474,12 @@ class TELEGRAM(Notifier):
                           'description': 'Disables automatic link previews for links in the message',
                           'input_type': 'checkbox'
                           }
+                         {'label': 'Proxy [IP:PORT]',
+                          'value': self.config['proxy'],
+                          'name': 'telegram_proxy',
+                          'description': 'Use proxy for connection to Telegram API server',
+                          'input_type': 'text'
+                          }
                          ]
 
         return config_option
