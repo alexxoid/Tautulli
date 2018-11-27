@@ -3434,6 +3434,8 @@ class TELEGRAM(Notifier):
         else:
             proxies = ''
 
+        logger.debug(u"Tautulli Notifiers :: Telegram proxy conf: {}".format(proxies))
+
         return self.make_request('https://api.telegram.org/bot{}/sendMessage'.format(self.config['bot_token']),
                                  headers=headers, data=data, proxies=proxies)
 
