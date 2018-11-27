@@ -3427,7 +3427,12 @@ class TELEGRAM(Notifier):
             data['disable_web_page_preview'] = True
 
         headers = {'Content-type': 'application/x-www-form-urlencoded'}
-        proxies = {'http': 'http://54.39.138.156:3128', 'https': 'http://54.39.138.156:1080'}
+
+        if self.config['proxy']:
+            proxy_value = 'http://{}'.format(self.config['proxy'])
+            proxies = {'http': proxy_value, 'https': proxy_value}
+        else:
+            proxies = ''
 
         return self.make_request('https://api.telegram.org/bot{}/sendMessage'.format(self.config['bot_token']),
                                  headers=headers, data=data, proxies=proxies)
